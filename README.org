@@ -1,0 +1,8 @@
+* This is my README !!!
+
+* keras-tensorflow tutorial
+https://www.youtube.com/watch?v=Y1-hQdgftMQ
+
+* GDP analysis
+[[https://data.worldbank.org/indicator/ny.gdp.mktp.kd.zg?end=2018&most_recent_value_desc=true&start=1961&view=map&year=2018][GDP % data]]
+also look at gdp data and their databank
