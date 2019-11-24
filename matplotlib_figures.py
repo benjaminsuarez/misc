@@ -1,7 +1,5 @@
 #tutorial: https://matplotlib.org/3.1.1/tutorials/introductory/pyplot.html
-
 import matplotlib.pyplot as plt
-
 plt.plot([1, 2, 3, 4]) # plot assumes these are sequence of y values, hence zero index
 plt.ylabel('some numbers')
 plt.show()
@@ -30,4 +28,30 @@ data['d'] = np.abs(data['d']) * 100
 plt.scatter('a', 'b', c='c', s='d', data=data) # c=color s = marker size
 plt.xlabel('entry a')
 plt.ylabel('entry b')
+plt.show()
+
+
+#sankey diagram (household budget)
+from matplotlib.sankey import Sankey
+fig = plt.figure(figsize = (15,8))
+ax = fig.add_subplot(1, 1, 1, xticks=[], yticks=[], 
+                     title="Household Budget")
+sankey = Sankey(ax=ax, scale=.1, offset=1, unit='%')
+sankey.add(flows=[100, -50, -30, -20],
+           labels=['household budget', 'necessities', 'fun', 
+                   'saving'],
+           orientations=[0, 0, 1, -1],
+           trunklength = 10,
+           edgecolor = '#027368',
+           facecolor = '#027368')
+sankey.add(flows=[50, -30, -10, -10], 
+           labels=['','rent', 'groceries', 'other'],
+           trunklength = 2,
+           pathlengths = [3,3,3,3],
+           orientations=[0, 1, 0, -1], 
+           prior=0, #which sankey are you connecting to (0-indexed)
+           connect=(1, 0), #flow number to connect: (prior, this)
+           edgecolor = '#58A4B0',
+           facecolor = '#58A4B0')
+diagrams = sankey.finish()
 plt.show()

@@ -6,3 +6,11 @@ https://www.youtube.com/watch?v=Y1-hQdgftMQ
 * GDP analysis
 [[https://data.worldbank.org/indicator/ny.gdp.mktp.kd.zg?end=2018&most_recent_value_desc=true&start=1961&view=map&year=2018][GDP % data]]
 also look at gdp data and their databank
+
+* sankey
+think of real world data that would benefit [[http://sankeymatic.com/build/][sankey plot]]
+
+* animate
+calculate pi with no of collisions, thanks to [[https://www.youtube.com/watch?v=HEfHFsfGXjs&feature=youtu.be][gregory galperin]], or montecarlo dots in a circle: olympics for computing pi
+[[https://github.com/JohnnyWobble/pi-estimation/blob/master/main.py][montecarlo pi estimate]] can approximate a circle y = [+/-] sqrt( 1 - x^2) to draw the circle with a radius of 1 at (0, 0)
+gganimate looks very promising
